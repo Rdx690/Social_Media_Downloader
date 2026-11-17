@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "social-media-downloader",
+  "name": "sourajitvfx-api",
 
   // A small hand-written Worker, not a framework adapter. The site is a static
   // export served from `assets` below; this script only answers /api/*. See
@@ -67,8 +67,8 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "social-media-downloader",
-      "database_id": "a8831143-b1d2-43a6-916b-e1ac27349fb1"
+      "database_name": "sourajitvfx-downloader",
+      "database_id": "b47f0b70-092d-4cb2-90a9-34e597e64944"
     }
   ],
 
