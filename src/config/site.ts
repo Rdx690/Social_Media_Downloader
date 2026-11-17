@@ -8,8 +8,8 @@ const siteUrl = (
 ).replace(/\/+$/, '')
 
 export const siteConfig = {
-  name: 'Social Media Downloader',
-  shortName: 'Social Downloader',
+  name: 'SOURAJIT VFX DOWNLOAD',
+  shortName: 'SOURAJIT VFX',
   /**
    * How the site describes itself everywhere — title, meta, OG, JSON-LD.
    *
@@ -20,13 +20,13 @@ export const siteConfig = {
    * we save the source file a platform serves for a public post. Say that.
    */
   tagline:
-    'Download TikTok, X, Instagram, Facebook & YouTube videos in original quality',
+    'SOURAJIT VFX DOWNLOAD — save public social media videos and media',
   description:
-    'Free downloader for public TikTok, X, Instagram, Facebook & YouTube posts — save HD videos, Reels & Shorts, extract MP3 audio, or grab photo carousels.',
+    'SOURAJIT VFX DOWNLOAD is a clean, mobile-friendly tool for public social media links, with a premium dark interface.',
   url: siteUrl,
   ogImage: `${siteUrl}/opengraph-image`,
   ogImageAlt:
-    'Social Media Downloader — paste a TikTok, X, Instagram, Facebook, or YouTube link to save the HD video, MP3 audio, or images from a public post.',
+    'SOURAJIT VFX DOWNLOAD — social media downloader.',
   locale: 'en_US',
   foundingYear: 2024,
   /**
@@ -42,15 +42,15 @@ export const siteConfig = {
    */
   supportEmail: 'support@socialdownloader.space',
   author: {
-    name: 'Mohamed Gado',
-    url: 'https://www.mohamedgado.com',
-    twitter: '@Sadge1996',
-    jobTitle: 'Software Engineer',
+    name: 'SOURAJIT VFX',
+    url: 'https://sourajitvfx-portfolio.vercel.app/',
+    twitter: '@sourajitvfx',
+    jobTitle: 'Creator and Developer',
   },
   links: {
-    twitter: 'https://twitter.com/Sadge1996',
-    github: 'https://github.com/Vette1123/social-media-downloader',
-    portfolio: 'https://www.mohamedgado.com',
+    twitter: 'https://www.instagram.com/sourajitvfx/',
+    github: 'https://github.com/Rdx690/Social_Media_Downloader',
+    portfolio: 'https://sourajitvfx-portfolio.vercel.app/',
     /** Our other site: the streaming/discovery app. Sister link, both ways. */
     reely: 'https://www.reely.space',
     /**
@@ -63,7 +63,7 @@ export const siteConfig = {
      * approached refused this product category, and the honest response is to
      * stop selling rather than to keep rewording the same offer.
      */
-    sponsor: 'https://buymeacoffee.com/vetteotp',
+    sponsor: 'https://github.com/Rdx690',
     /**
      * The two membership levels, rather than the tip jar.
      *
@@ -74,7 +74,7 @@ export const siteConfig = {
      * must point at this one, or someone follows the ask, pays, and gets
      * nothing. See docs/buymeacoffee-setup.md.
      */
-    membership: 'https://buymeacoffee.com/vetteotp/membership',
+    membership: 'https://github.com/Rdx690',
   },
   twitterTag: '@Sadge1996',
   /**
