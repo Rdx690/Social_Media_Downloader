@@ -35,9 +35,7 @@ import {
   YouTubeIcon,
 } from '@/components/icons'
 import { BatchPanel } from '@/components/BatchPanel'
-import { InstallPrompt } from '@/components/InstallPrompt'
 import { PastDueBanner } from '@/components/PastDueBanner'
-import { PromoSlot } from '@/components/PromoSlot'
 import { ProNudge } from '@/components/ProNudge'
 import { SUPPORT_PRICES } from '@/config/support'
 import { parseBatchInput } from '@/lib/batchQueue'
@@ -1560,7 +1558,6 @@ export function DownloaderApp() {
       {/* Install nudge — secondary, so it sits below the paste bar, controls and
           Recent rather than interrupting the core flow. Installing registers the
           Android share target (share a link straight from TikTok/IG/YouTube). */}
-      {!state.videoMetadata && !state.loading && <InstallPrompt />}
 
       {/* Results — expand directly under the paste bar.
           scroll-mt-24: the success handler calls scrollIntoView({block:'start'}),
@@ -2234,7 +2231,6 @@ export function DownloaderApp() {
       {/* Sponsor card — only after a result exists, never while resolving or
           downloading, and always below the download controls. */}
       {state.videoMetadata && !isResolvingOrDownloading(state) && (
-        <PromoSlot placement='post-result' platform={state.videoMetadata.platform} />
       )}
 
       {lightboxIndex !== null && state.videoMetadata?.images && (
