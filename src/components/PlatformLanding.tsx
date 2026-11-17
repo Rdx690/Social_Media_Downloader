@@ -16,9 +16,6 @@ import {
   VimeoIcon,
   YouTubeIcon,
 } from '@/components/icons'
-import { SupportPanel } from '@/components/SupportPanel'
-import { PromoSlot } from '@/components/PromoSlot'
-import { DevAppLinks } from '@/components/DevAppLinks'
 import { SiteFooter } from '@/components/SiteFooter'
 import type { Platform, PlatformSlug } from '@/lib/platforms'
 import { platforms } from '@/lib/platforms'
@@ -280,8 +277,6 @@ export function PlatformLanding({ platform }: { platform: Platform }) {
             ))}
           </div>
 
-          {/* Dev / companion-app links */}
-          <DevAppLinks />
         </Surface>
 
         {/* WHAT YOU CAN DO — platform feature list */}
@@ -325,21 +320,6 @@ export function PlatformLanding({ platform }: { platform: Platform }) {
             sub='One tool per platform — pick whichever you need.'
           />
           <CrossLinkNav activeSlug={platform.slug} />
-        </section>
-
-        {/* Compact, because these pages arrive from search with one link in
-            mind. The full split belongs on the home page, where someone is
-            already browsing; here it is a single line that names the one thing
-            worth paying for and gets out of the way. */}
-        <section className='mt-16 sm:mt-24'>
-          <SupportPanel variant='compact' />
-        </section>
-
-        <section className='mt-16 sm:mt-24'>
-          <PromoSlot
-            placement='in-content'
-            platform={OFFER_PLATFORM_BY_SLUG[platform.slug]}
-          />
         </section>
 
         {/* SEO PROSE + FAQ */}
