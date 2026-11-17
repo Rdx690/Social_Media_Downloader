@@ -57,7 +57,7 @@ import { API_ROUTES } from '../src/lib/apiRoutes'
  * everything else to the canonical origin.
  */
 const WEBHOOK_PATH = '/api/billing/webhook'
-const CANONICAL_ORIGIN = 'https://www.socialdownloader.space'
+const CANONICAL_ORIGIN = 'https://sourajitvfx-api.himangshusarkar524.workers.dev'
 
 function isWorkersDev(hostname) {
   return hostname.endsWith('.workers.dev')
@@ -95,7 +95,11 @@ const worker = {
     // Checked before routing, so nothing else on this hostname is ever
     // dispatched — see WEBHOOK_PATH. 301 rather than 404 so a crawler that has
     // already found the workers.dev copy is told where the real page lives.
-    if (isWorkersDev(url.hostname) && url.pathname !== WEBHOOK_PATH) {
+    if (
+      isWorkersDev(url.hostname) &&
+      url.pathname !== WEBHOOK_PATH &&
+      url.hostname !== new URL(CANONICAL_ORIGIN).hostname
+    ) {
       return Response.redirect(`${CANONICAL_ORIGIN}${url.pathname}${url.search}`, 301)
     }
 
