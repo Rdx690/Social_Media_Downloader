@@ -20,13 +20,13 @@ export const siteConfig = {
    * we save the source file a platform serves for a public post. Say that.
    */
   tagline:
-    'SOURAJIT VFX DOWNLOAD — save public social media videos and media',
+    'SOURAJITVFX Download — free social media video downloader for Instagram, YouTube, Facebook, TikTok and more',
   description:
-    'SOURAJIT VFX DOWNLOAD is a clean, mobile-friendly tool for public social media links, with a premium dark interface.',
+    'SOURAJITVFX Download by Sourajit VFX is a free, mobile-friendly social media downloader for public Instagram Reels, YouTube videos, Facebook videos, TikTok and more.',
   url: siteUrl,
   ogImage: `${siteUrl}/opengraph-image`,
   ogImageAlt:
-    'SOURAJIT VFX DOWNLOAD — social media downloader.',
+    'SOURAJITVFX Download by Sourajit VFX — social media video downloader.',
   locale: 'en_US',
   foundingYear: 2024,
   /**
@@ -76,7 +76,7 @@ export const siteConfig = {
      */
     membership: 'https://github.com/Rdx690',
   },
-  twitterTag: '@Sadge1996',
+  twitterTag: '@sourajitvfx',
   /**
    * Meta keywords. Google has ignored this tag since 2009, so it carries no
    * ranking weight — but it is machine-readable text on the page a payment
@@ -84,6 +84,18 @@ export const siteConfig = {
    * nothing here may trade on another downloader's brand name.
    */
   keywords: [
+    // Brand searches
+    'SOURAJITVFX',
+    'Sourajit VFX',
+    'SOURAJIT VFX DOWNLOAD',
+    'SOURAJITVFX Download',
+    'Sourajitvfx downloader',
+    'Sourajit VFX downloader',
+    'Sourajitvfx social media downloader',
+    'Sourajitvfx Instagram downloader',
+    'Sourajitvfx YouTube downloader',
+    'Sourajitvfx Facebook downloader',
+    'Sourajitvfx TikTok downloader',
     // Primary intent
     'TikTok downloader',
     'TikTok video downloader',
