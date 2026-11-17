@@ -4,7 +4,7 @@ export type SiteConfig = typeof siteConfig
 // the production domain. Any trailing slash is stripped so `${siteUrl}/path`
 // never produces a double slash.
 const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.socialdownloader.space'
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://api.pterodactylfree.dpdns.org'
 ).replace(/\/+$/, '')
 
 export const siteConfig = {
