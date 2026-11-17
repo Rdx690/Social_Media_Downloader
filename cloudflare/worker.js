@@ -57,7 +57,7 @@ import { API_ROUTES } from '../src/lib/apiRoutes'
  * everything else to the canonical origin.
  */
 const WEBHOOK_PATH = '/api/billing/webhook'
-const CANONICAL_ORIGIN = 'https://sourajitvfx-api.himangshusarkar524.workers.dev'
+const CANONICAL_ORIGIN = 'https://api.pterodactylfree.dpdns.org'
 
 function isWorkersDev(hostname) {
   return hostname.endsWith('.workers.dev')
