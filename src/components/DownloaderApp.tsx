@@ -2228,11 +2228,6 @@ export function DownloaderApp() {
           )}
         </div>
 
-      {/* Sponsor card — only after a result exists, never while resolving or
-          downloading, and always below the download controls. */}
-      {state.videoMetadata && !isResolvingOrDownloading(state) && (
-      )}
-
       {lightboxIndex !== null && state.videoMetadata?.images && (
         <ImageLightbox
           images={state.videoMetadata.images}
