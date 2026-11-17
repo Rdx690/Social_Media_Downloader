@@ -19,29 +19,6 @@ import {
 import { SiteFooter } from '@/components/SiteFooter'
 import type { Platform, PlatformSlug } from '@/lib/platforms'
 import { platforms } from '@/lib/platforms'
-import type { SupportedPlatform } from '@/lib/validator'
-
-/**
- * `Platform.slug` is the URL slug ('tiktok-downloader'), but offers.ts and
- * selectOffer() key platform targeting on detectPlatform()'s output
- * ('tiktok') — see src/lib/validator.ts. This is the one place that maps
- * between the two so PromoSlot never has to know about landing-page routing.
- * Typed against `SupportedPlatform` (not `string`) so a typo'd value fails
- * the build instead of relying on review.
- */
-const OFFER_PLATFORM_BY_SLUG: Record<PlatformSlug, SupportedPlatform> = {
-  'tiktok-downloader': 'tiktok',
-  'twitter-video-downloader': 'twitter',
-  'instagram-downloader': 'instagram',
-  'youtube-downloader': 'youtube',
-  'facebook-downloader': 'facebook',
-  'pinterest-downloader': 'pinterest',
-  'reddit-video-downloader': 'reddit',
-  'threads-video-downloader': 'threads',
-  'snapchat-downloader': 'snapchat',
-  'twitch-clip-downloader': 'twitch',
-  'vimeo-downloader': 'vimeo',
-}
 
 const heroChips = [
   'Free forever',
