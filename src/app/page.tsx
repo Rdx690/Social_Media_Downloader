@@ -3,9 +3,6 @@ import { DownloaderApp } from '@/components/DownloaderApp'
 import { Surface } from '@/components/Surface'
 import { InteractiveBackground } from '@/components/InteractiveBackground'
 import { LazyFAQ } from '@/components/LazyFAQ'
-import { ProHeroLine } from '@/components/ProNudge'
-import { SupportPanel } from '@/components/SupportPanel'
-import { PromoSlot } from '@/components/PromoSlot'
 import {
   FacebookIcon,
   InstagramIcon,
@@ -19,7 +16,6 @@ import {
   VimeoIcon,
   YouTubeIcon,
 } from '@/components/icons'
-import { DevAppLinks } from '@/components/DevAppLinks'
 import { SiteFooter } from '@/components/SiteFooter'
 import { homepageFaqs } from '@/lib/homepageFaqs'
 import { platforms } from '@/lib/platforms'
@@ -243,17 +239,13 @@ export default function Home() {
               </div>
 
               <h1 className='mb-3 text-3xl font-extrabold tracking-tight text-white text-balance sm:text-4xl md:text-5xl'>
-                Download any public video,{' '}
-                <span className='text-grad'>in original quality</span>
+                <span className='text-grad'>SOURAJIT VFX DOWNLOAD</span>
               </h1>
               <p className='mx-auto mb-3 max-w-xl text-sm text-white/70 md:text-base'>
-                Save the video, extract MP3 audio, or grab full image galleries
-                from public posts on TikTok, X, Instagram, Facebook, YouTube,
-                Pinterest, Reddit, Threads, Snapchat, Twitch &amp; Vimeo.
+                One premium destination to save public videos and media from TikTok, Instagram, Facebook, YouTube, X and more.
               </p>
               {/* The first mention of Pro anywhere above the fold. Self-hides
                   for a subscriber. */}
-              <ProHeroLine />
             </div>
 
             {/* Interactive island — paste bar + results */}
@@ -272,8 +264,6 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Dev / companion-app links */}
-            <DevAppLinks />
           </Surface>
 
           {/* ---------------------------------------------------------------
@@ -339,8 +329,8 @@ export default function Home() {
           ---------------------------------------------------------------- */}
           <section className='mt-16 sm:mt-24'>
             <SectionHead
-              title='Jump to a dedicated downloader'
-              sub='Prefer a page built for one platform? Pick yours.'
+              title='Choose your platform'
+              sub='Fast access to dedicated download tools.'
             />
             <nav
               aria-label='Per-platform downloaders'
@@ -378,19 +368,26 @@ export default function Home() {
             </nav>
           </section>
 
-          {/* ---------------------------------------------------------------
-              SUPPORT — the ask, and the only one on the page
-          ---------------------------------------------------------------- */}
+          {/* SOURAJIT VFX project showcase */}
           <section className='mt-16 sm:mt-24'>
-            <SupportPanel />
-          </section>
-
-          {/* The same below-the-fold slot the platform pages carry. No platform
-              prop here: the home page serves every platform, so only offers
-              marked `platforms: 'all'` are eligible. Sits after the grid and
-              before the prose, mirroring PlatformLanding exactly. */}
-          <section className='mt-16 sm:mt-24'>
-            <PromoSlot placement='in-content' />
+            <SectionHead
+              title='More projects by SOURAJIT VFX'
+              sub='Explore my creative and developer projects.'
+            />
+            <div className='grid gap-3 sm:grid-cols-2 lg:grid-cols-4'>
+              {[
+                { name: 'SOURAJITVFX Portfolio', desc: 'My creative work, profile and projects.', href: 'https://sourajitvfx-portfolio.vercel.app/', label: 'Open portfolio' },
+                { name: 'VFX Save', desc: 'My media utility and downloader project.', href: 'https://vfxsave.onrender.com/', label: 'Visit project' },
+                { name: 'GitHub Projects', desc: 'Explore source code and development work.', href: 'https://github.com/Rdx690', label: 'View GitHub' },
+                { name: 'Music Vault X', desc: 'A music discovery and player project.', href: 'https://github.com/Rdx690', label: 'Explore projects' },
+              ].map((project) => (
+                <Surface key={project.name} as='a' href={project.href} target='_blank' rel='noopener noreferrer' interaction='lift' className='p-5'>
+                  <p className='font-semibold text-white'>{project.name}</p>
+                  <p className='mt-2 text-sm text-white/60'>{project.desc}</p>
+                  <p className='mt-4 text-sm font-medium text-cyan-300'>{project.label} ↗</p>
+                </Surface>
+              ))}
+            </div>
           </section>
 
           {/* ---------------------------------------------------------------
@@ -406,8 +403,7 @@ export default function Home() {
                 id='seo-heading'
                 className='mb-4 text-2xl font-bold tracking-tight text-white text-balance md:text-3xl'
               >
-                Free TikTok, X, Instagram, Facebook &amp; YouTube Video
-                Downloader
+                SOURAJIT VFX — Social Media Downloader
               </h2>
               <p className='mb-4 max-w-[60ch] text-sm leading-relaxed text-white/80 md:text-base'>
                 Save any public TikTok, Twitter/X, Instagram, Facebook, or
