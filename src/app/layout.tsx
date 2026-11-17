@@ -162,7 +162,7 @@ export const metadata: Metadata = {
     })),
   },
   verification: {
-    google: 'aha64Aa3HDSFKw-xDlfpIGcBkGRU4lRV9xU-qR2SPwc',
+    google: '68uh08NUGcfQ7Jfp8uQhbZwBVfmgZwBL5d_5RhD_i00',
   },
   other: {
     'msapplication-TileColor': '#08080a',
