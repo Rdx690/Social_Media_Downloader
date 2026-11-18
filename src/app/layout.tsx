@@ -161,9 +161,6 @@ export const metadata: Metadata = {
       media: splashMedia(device),
     })),
   },
-  verification: {
-    google: '68uh08NUGcfQ7Jfp8uQhbZwBVfmgZwBL5d_5RhD_i00',
-  },
   other: {
     'msapplication-TileColor': '#08080a',
   },
@@ -177,6 +174,7 @@ export default function RootLayout({
   return (
     <html lang='en' dir='ltr'>
       <head>
+        <meta name='google-site-verification' content='68uh08NUGcfQ7Jfp8uQhbZwBVfmgZwBL5d_5RhD_i00' />
         {/* Icons, manifest, tile colour and Google verification are all declared
             in `metadata` above — Next renders them into <head> itself. Nothing
             static belongs here; only the two inline scripts, which have no
