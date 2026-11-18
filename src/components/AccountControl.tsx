@@ -26,7 +26,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useRef, useState } from 'react'
 import { Avatar } from '@/components/Avatar'
-import { CoffeeIcon, PinIcon, PinOffIcon } from '@/components/icons'
+import { CoffeeIcon, DownloadIcon, PinIcon, PinOffIcon } from '@/components/icons'
 import {
   type CachedProfile,
   cachedProfile,
@@ -121,10 +121,62 @@ export function AccountControl() {
             <PinToggle pinned={pinned} onToggle={togglePinned} />
           )}
           <ProPill live={live} cached={cached} pathname={pathname} />
-          <Control live={live} cached={cached} pathname={pathname} />
+          <InstallButton />
         </>
       )}
     </div>
+  )
+}
+
+/**
+ * Replaces the signed-out account CTA with a real PWA install action.
+ * Browsers without an install prompt get a short platform-specific hint.
+ */
+function InstallButton() {
+  const [installEvent, setInstallEvent] = useState<((...args: never[]) => Promise<void>) | null>(null)
+  const [ios, setIos] = useState(false)
+
+  useEffect(() => {
+    const ua = window.navigator.userAgent
+    const isIOSDevice = /iPad|iPhone|iPod/.test(ua)
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches ||
+      (window.navigator as Navigator & { standalone?: boolean }).standalone === true
+    setIos(isIOSDevice && !isStandalone)
+    const onBeforeInstall = (event: Event) => {
+      event.preventDefault()
+      const promptEvent = event as Event & { prompt: () => Promise<void> }
+      setInstallEvent(() => promptEvent.prompt.bind(promptEvent))
+    }
+    const onInstalled = () => setInstallEvent(null)
+    window.addEventListener('beforeinstallprompt', onBeforeInstall)
+    window.addEventListener('appinstalled', onInstalled)
+    return () => {
+      window.removeEventListener('beforeinstallprompt', onBeforeInstall)
+      window.removeEventListener('appinstalled', onInstalled)
+    }
+  }, [])
+
+  const handleInstall = async () => {
+    if (installEvent) {
+      await installEvent()
+      setInstallEvent(null)
+    } else if (ios) {
+      window.alert('Tap the Share button in Safari, then choose “Add to Home Screen”.')
+    } else {
+      window.alert('Open your browser menu and choose “Install app” or “Add to Home screen”.')
+    }
+  }
+
+  return (
+    <button
+      type='button'
+      onClick={handleInstall}
+      className='btn-grad btn-press pointer-events-auto flex items-center gap-1.5 rounded-full px-4 py-2 text-xs font-semibold sm:py-1.5'
+      aria-label='Install SOURAJIT VFX DOWNLOAD app'
+    >
+      <DownloadIcon className='h-3.5 w-3.5' aria-hidden />
+      Install
+    </button>
   )
 }
 
